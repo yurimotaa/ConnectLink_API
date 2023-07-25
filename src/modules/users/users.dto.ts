@@ -1,6 +1,6 @@
-export class CreateUserDto {
+export type UserDTO = {
+  id?: string;
   name: string;
   email: string;
   password: string;
-  registerDate: Date;
-}
+};
