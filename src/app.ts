@@ -8,10 +8,9 @@ import cors from "cors";
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.use("/clients", clientsRoutes);
 app.use("/contacts", contactsRoutes);
 
 app.use(handleErrors);
-
-app.use(cors());
