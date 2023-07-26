@@ -29,14 +29,17 @@ SECRET_KEY=CHAVE_SECRETA
 
 **CLIENTES**
 1. Criação de cliente:
-  Request:
-    {
+
+Request:
+
+   {
     	"name": "Pedro",
     	"email": "pedro@mail.com",
     	"phone": "63999999999"
     }
    
-   Response:
+Response:
+     
      {
     	"id": 2,
     	"name": "Pedro",
@@ -45,13 +48,16 @@ SECRET_KEY=CHAVE_SECRETA
     	"createdAt": "2023-07-26T16:03:23.507Z"
     }
 
-2. Listagem de clientes
+3. Listagem de clientes
    Não há envio de corpo no request
+   
    Devolve a lista com todos os clientes cadastrados
 
    Pode recuperar os dados de um cliente especifico passando seu id pela url
+   
    Devolve os dados do cliente e caso ja tenha contatos cadastrados, devolve a lista desses contatos e suas informações:
-     {
+
+   {
     	"id": 2,
     	"name": "Pedro",
     	"email": "pedro@mail.com",
@@ -60,24 +66,29 @@ SECRET_KEY=CHAVE_SECRETA
     	"contacts": []
     }
 
-3. Atualizar cliente
+5. Atualizar cliente
    Envio de um corpo com os dados a atualizar e o id do cliente pela URL
+   
    Devolve os dados do cliente já atualizado
 
-4. Deletar cliente
+7. Deletar cliente
    Não há envio de corpo, mas apenas o ID pela URL
+   
    Devolve o apenas o status adequado
 
 **Contatos**
   1. Criação de contato
      Espera o envio dos dados do contato junto do ID do cliente relacionado:
+     
        {
       	"name": "paulin",
       	"email": "paulin@mail.com",
       	"phone": "123456",
       	"clientId": 2
       }
+     
      Devolve os dados do contato cadastrado e seu cliente relacionado:
+     
        {
         	"id": 9,
         	"name": "paulin",
@@ -93,12 +104,15 @@ SECRET_KEY=CHAVE_SECRETA
         	}
       }
 
-2. Listagem de contatos
+3. Listagem de contatos
    Não há envio de corpo no request
+   
    Devolve a lista com todos os contatos cadastrados
 
    Pode recuperar os dados de um contato especifico passando seu ID pela URL
+   
    Devolve os dados do contato e e do cliente a ele relacionado:
+   
      {
   		"id": 5,
   		"name": "robson",
