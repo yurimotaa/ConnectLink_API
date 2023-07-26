@@ -90,7 +90,7 @@ Response:
      Devolve os dados do contato cadastrado e seu cliente relacionado:
      
        {
-        	"id": 9,
+     		"id": 9,
         	"name": "paulin",
         	"email": "paulin@mail.com",
         	"phone": "123456",
@@ -114,17 +114,17 @@ Response:
    Devolve os dados do contato e e do cliente a ele relacionado:
    
      {
-  		"id": 5,
-  		"name": "robson",
-  		"email": "robson@mail.com",
-  		"phone": "123456",
-  		"createdAt": "2023-07-26T14:22:15.875Z",
-  		"client": {
-  			"id": 2,
-  			"name": "Pedro",
-  			"email": "pedro@mail.com",
-  			"phone": "63999999999",
-  			"createdAt": "2023-07-25T22:49:29.599Z"
+  	"id": 5,
+  	"name": "robson",
+  	"email": "robson@mail.com",
+  	"phone": "123456",
+  	"createdAt": "2023-07-26T14:22:15.875Z",
+  	"client": {
+  		"id": 2,
+  		"name": "Pedro",
+  		"email": "pedro@mail.com",
+  		"phone": "63999999999",
+  		"createdAt": "2023-07-25T22:49:29.599Z"
   		}
 	  },
 
