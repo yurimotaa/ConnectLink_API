@@ -32,11 +32,11 @@ SECRET_KEY=CHAVE_SECRETA
 
 Request:
 
-   {
+   	{
     	"name": "Pedro",
     	"email": "pedro@mail.com",
     	"phone": "63999999999"
-}
+	}
    
 Response:
      
@@ -48,7 +48,7 @@ Response:
     	"createdAt": "2023-07-26T16:03:23.507Z"
     }
 
-3. Listagem de clientes
+2. Listagem de clientes
    Não há envio de corpo no request
    
    Devolve a lista com todos os clientes cadastrados
@@ -58,20 +58,21 @@ Response:
    Devolve os dados do cliente e caso ja tenha contatos cadastrados, devolve a lista desses contatos e suas informações:
 
    {
-    	"id": 2,
-    	"name": "Pedro",
-    	"email": "pedro@mail.com",
-    	"phone": "63999999999",
-    	"createdAt": "2023-07-25T22:49:29.599Z",
-    	"contacts": []
-    }
+	"id": 2,
+	"name": "Pedro",
+	"email": "pedro@mail.com",
+	"phone": "63999999999",
+	"createdAt": "2023-07-25T22:49:29.599Z",
+	"contacts": []
+}
 
-5. Atualizar cliente
+
+4. Atualizar cliente
    Envio de um corpo com os dados a atualizar e o id do cliente pela URL
    
    Devolve os dados do cliente já atualizado
 
-7. Deletar cliente
+5. Deletar cliente
    Não há envio de corpo, mas apenas o ID pela URL
    
    Devolve o apenas o status adequado
@@ -85,11 +86,11 @@ Response:
       	"email": "paulin@mail.com",
       	"phone": "123456",
       	"clientId": 2
-      }
+      	}
      
      Devolve os dados do contato cadastrado e seu cliente relacionado:
      
-       {
+       		{
      		"id": 9,
         	"name": "paulin",
         	"email": "paulin@mail.com",
@@ -102,9 +103,9 @@ Response:
         		"phone": "63999999999",
         		"createdAt": "2023-07-25T22:49:29.599Z"
         	}
-      }
+      		}
 
-3. Listagem de contatos
+2. Listagem de contatos
    Não há envio de corpo no request
    
    Devolve a lista com todos os contatos cadastrados
@@ -113,7 +114,7 @@ Response:
    
    Devolve os dados do contato e e do cliente a ele relacionado:
    
-     {
+   {
   	"id": 5,
   	"name": "robson",
   	"email": "robson@mail.com",
@@ -125,8 +126,8 @@ Response:
   		"email": "pedro@mail.com",
   		"phone": "63999999999",
   		"createdAt": "2023-07-25T22:49:29.599Z"
-  		}
-	  },
+  	}
+	},
 
 3. Atualizar contato
    Envio de um corpo com os dados a atualizar e o id do contato pela URL
