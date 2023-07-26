@@ -1,10 +1,7 @@
 import { AppDataSource } from "../../data-source";
 import { Client } from "../../entities/clients.entity";
 import { TClientResponse } from "../../interfaces/clients.interfaces";
-import {
-  arrayClientsSchema,
-  responseClientSchema,
-} from "../../schemas/clients.schemas";
+import { responseClientSchema } from "../../schemas/clients.schemas";
 
 const listAllClientsService = async (): Promise<TClientResponse[]> => {
   const clientRepo = AppDataSource.getRepository(Client);
