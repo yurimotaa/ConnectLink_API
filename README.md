@@ -14,10 +14,10 @@ Possivel, então, visualizar os contatos que cada cliente cadastrado possue.
 2. Instale as dependências: `npm install`
 
 ## Configuração
-
 1. Configure o banco de dados postgres com as seguintes informações:
    
 DATABASE_URL="postgres://USUARIO:SENHA@localhost:NUMERO_DA_PORTA/NOME_DO_BANCO"
+
 SECRET_KEY=CHAVE_SECRETA
 
 ## Uso
