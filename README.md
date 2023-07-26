@@ -36,7 +36,7 @@ Request:
     	"name": "Pedro",
     	"email": "pedro@mail.com",
     	"phone": "63999999999"
-    }
+}
    
 Response:
      
