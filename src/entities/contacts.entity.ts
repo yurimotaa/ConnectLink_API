@@ -24,7 +24,7 @@ class Contact {
   @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP" })
   createdAt: Date;
 
-  @ManyToOne(() => Client, (client) => client.contacts)
+  @ManyToOne(() => Client, (client) => client.contacts, { cascade: true })
   client: Client;
 
   @BeforeInsert()
