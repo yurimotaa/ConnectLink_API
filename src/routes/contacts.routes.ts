@@ -1,6 +1,9 @@
 import { Router } from "express";
 import { bodyValidation } from "../middlewares/bodyValidation.middleware";
-import { requestContactSchema } from "../schemas/contacts.schemas";
+import {
+  requestContactSchema,
+  updateContactSchema,
+} from "../schemas/contacts.schemas";
 import {
   createContactController,
   deleteContactController,
@@ -20,6 +23,7 @@ contactsRoutes.post(
 
 contactsRoutes.patch(
   "/:id",
+  bodyValidation(updateContactSchema),
   contactIdExistsMiddleware,
   updateContactController
 );

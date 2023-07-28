@@ -18,9 +18,16 @@ const responseClientSchema = clientSchema.extend({
 
 const arrayClientsSchema = z.array(responseClientSchema);
 
+const updateClientSchema = clientSchema
+  .omit({
+    id: true,
+  })
+  .partial();
+
 export {
   clientSchema,
   arrayClientsSchema,
   requestClientSchema,
   responseClientSchema,
+  updateClientSchema,
 };

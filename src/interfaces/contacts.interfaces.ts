@@ -3,6 +3,7 @@ import {
   contactSchema,
   requestContactSchema,
   responseContactSchema,
+  updateContactSchema,
 } from "../schemas/contacts.schemas";
 
 type TContact = z.infer<typeof contactSchema>;
@@ -11,4 +12,6 @@ type TContactRequest = z.infer<typeof requestContactSchema>;
 
 type TContactResponse = z.infer<typeof responseContactSchema>;
 
-export { TContact, TContactRequest, TContactResponse };
+type TContacttUpdate = z.infer<typeof updateContactSchema>;
+
+export { TContact, TContactRequest, TContactResponse, TContacttUpdate };

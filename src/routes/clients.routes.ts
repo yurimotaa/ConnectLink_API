@@ -1,6 +1,9 @@
 import { Router } from "express";
 import { bodyValidation } from "../middlewares/bodyValidation.middleware";
-import { requestClientSchema } from "../schemas/clients.schemas";
+import {
+  requestClientSchema,
+  updateClientSchema,
+} from "../schemas/clients.schemas";
 import { emailExists } from "../middlewares/emailExists.middleware";
 import {
   createClientController,
@@ -24,7 +27,12 @@ clientsRoutes.get("", listAllClientsController);
 
 clientsRoutes.get("/:id", clientIdExistsMiddleware, listOneClientController);
 
-clientsRoutes.patch("/:id", clientIdExistsMiddleware, updateClientController);
+clientsRoutes.patch(
+  "/:id",
+  bodyValidation(updateClientSchema),
+  clientIdExistsMiddleware,
+  updateClientController
+);
 
 clientsRoutes.delete("/:id", clientIdExistsMiddleware, deleteClientController);
 
