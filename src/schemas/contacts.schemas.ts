@@ -19,9 +19,17 @@ const responseContactSchema = contactSchema.extend({
 
 const arrayContactSchema = z.array(contactSchema);
 
+const updateContactSchema = contactSchema
+  .omit({
+    id: true,
+    clientId: true,
+  })
+  .partial();
+
 export {
   contactSchema,
   requestContactSchema,
   responseContactSchema,
   arrayContactSchema,
+  updateContactSchema,
 };
